@@ -1,0 +1,49 @@
+CRITICAL - 2023-09-26 02:54:21 --> Invalid file: "item/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('item/index.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('item/index', [], true)
+ 3 APPPATH\Controllers\User.php(9): view('item/index')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-26 05:58:14 --> Invalid file: "layout/general-layout.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/general-layout.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout/general-layout.php', [], true)
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user/index', [], true)
+ 4 APPPATH\Controllers\User.php(12): view('user/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-26 06:32:22 --> Invalid file: "layout/general-layout.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/general-layout.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout/general-layout.php', [], true)
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user/index', [], true)
+ 4 APPPATH\Controllers\User.php(12): view('user/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-26 06:32:52 --> Invalid file: "./layout/general-layout.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('./layout/general-layout.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('./layout/general-layout.php', [], true)
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user/index', [], true)
+ 4 APPPATH\Controllers\User.php(12): view('user/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-26 06:32:53 --> Invalid file: "./layout/general-layout.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('./layout/general-layout.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('./layout/general-layout.php', [], true)
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user/index', [], true)
+ 4 APPPATH\Controllers\User.php(12): view('user/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
