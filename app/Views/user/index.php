@@ -43,7 +43,9 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <div class="row mb-2">
                                     <a class="btn btn-success" href="#" role="button" title="View"> Add</i></a>                             
-                                    
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addEmployeeModal">
+                                        Add Employee
+                                    </button>
                                 </div>
                                 <thead>
                                 
@@ -65,9 +67,9 @@
                                         <td><?=$user->middlename?></td>
                                         <td><?=$user->userlevel?></td>
                                         <td>
-                                            <a class="btn btn-primary" href="#" role="button" title="View">  <i class="fa fa-search"></i></a>
-                                            <a class="btn btn-warning" href="#" role="button" title="Edit">  <i class="fa fa-id-card"></i></a>
-                                            <a class="btn btn-danger" href="#" role="button" title="Delete">  <i class="fa fa-minus-square"></i></a>
+                                            <a class="btn btn-primary" href="<?=base_url()?>user/view" role="button" title="View">  <i class="fa fa-search"></i></a>
+                                            <a class="btn btn-warning" href="<?=base_url()?>user/edit" role="button" title="Edit">  <i class="fa fa-id-card"></i></a>
+                                            <a class="btn btn-danger" href="<?=base_url()?>user/delete" role="button" title="Delete">  <i class="fa fa-minus-square"></i></a>
                                         </td>
                                     </tr>
                                     <?php endforeach ?>  
@@ -97,7 +99,7 @@
         <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  
+  <?= $this->include('allmodal/usermodal')?>
   
   
   
