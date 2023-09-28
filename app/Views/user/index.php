@@ -42,10 +42,11 @@
                             
                             <table id="example1" class="table table-bordered table-striped">
                                 <div class="row mb-2">
-                                    <a class="btn btn-success" href="#" role="button" title="View"> Add</i></a>                             
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addEmployeeModal">
-                                        Add Employee
+                                                                 
+                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#AddUserModal">
+                                        Add User
                                     </button>
+
                                 </div>
                                 <thead>
                                 
@@ -67,7 +68,14 @@
                                         <td><?=$user->middlename?></td>
                                         <td><?=$user->userlevel?></td>
                                         <td>
-                                            <a class="btn btn-primary" href="<?=base_url()?>user/view" role="button" title="View">  <i class="fa fa-search"></i></a>
+      
+                              
+                                        <button class="btn btn-primary" onclick="ViewUserModal(<?= $user->id; ?>)">View</button>
+
+
+
+
+                                           
                                             <a class="btn btn-warning" href="<?=base_url()?>user/edit" role="button" title="Edit">  <i class="fa fa-id-card"></i></a>
                                             <a class="btn btn-danger" href="<?=base_url()?>user/delete" role="button" title="Delete">  <i class="fa fa-minus-square"></i></a>
                                         </td>
@@ -99,9 +107,10 @@
         <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <?= $this->include('allmodal/usermodal')?>
+
+  <?= view('allmodal/usermodal') ?>
   
-  
+ 
   
   
   <footer class="main-footer">
@@ -117,4 +126,22 @@
   </aside>
   <!-- /.control-sidebar -->
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <?= $this ->endSection() ?>
+

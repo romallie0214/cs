@@ -10,8 +10,11 @@ use CodeIgniter\Router\RouteCollection;
 //Setting CS to default page
 $routes->setDefaultController('User');
 $routes->setDefaultMethod('index');
-$routes->setAutoRoute(true);
 
+$routes->get('/user/view/(:num)', 'User::view/$1');
+
+
+$routes->setAutoRoute(true);
 
 //$routes->get('/', 'Home::index');
 //$routes->get('/home', 'Home::index');
