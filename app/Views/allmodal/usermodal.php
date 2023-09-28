@@ -80,7 +80,7 @@
             </div>
             <div class="modal-body">
                 <label for="employeeNumber">Employee Number:</label>
-               <<input type="text" id="employeeNumber" class="form-control" value="<?= $user->empno ?>" readonly>
+                <input type="text" id="employeeNumber" class="form-control" value="" readonly>
 
 
                 <label for="firstName">First Name:</label>
@@ -93,7 +93,11 @@
                 <input type="text" id="middleName" class="form-control" readonly>
 
                 <label for="userLevel">User Level:</label>
-                <input type="text" id="userLevel" class="form-control" readonly>
+                <select class="form-control" id="user_level" name="user_level" readonly>
+                    <option value="1">Admin</option>
+                    <option value="2">Encoder</option>
+                    <option value="3">Another Role</option>
+                </select>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -106,16 +110,50 @@
     // JavaScript code to handle modal interactions and AJAX requests
     // Example code for opening modals
 
-    function ViewUserModal() {
-        console.log('Open View Item Modal');
-        $('#ViewUserModal').modal('show');
+    function ViewUserModal(user_id) {
+        $.ajax({  
+            url:"<?php echo base_url(); ?>user/getUserByID",  
+            method:"POST",  
+            data:{user_id:user_id},  
+            dataType:"json",  
+            success:function(data)  
+            {                
+                $('#employeeNumber').val(data.empno);  
+                $('#firstName').val(data.firstname);
+                $('#lastName').val(data.lastname);
+                $('#middleName').val(data.middlename);                
+                $('#user_level').val(data.userlevel);  
+                $('#ViewUserModal').modal('show');  
+            }  
+        })
+        
+        //$('#ViewUserModal').modal('show');
 
 
         // Include your logic to populate the "View Item" modal content here
     }
 
-    function openEditItemModal() {
-        $('#editItemModal').modal('show');
-        // Include your logic to populate the "Edit Item" modal content here
+    function openEditItemModal(user_id) {
+        $.ajax({  
+            url:"<?php echo base_url(); ?>user/getUserByID",  
+            method:"POST",  
+            data:{user_id:user_id},  
+            dataType:"json",  
+            success:function(data)  
+            {                
+                $('#employeeNumber').removeAttr('readonly');
+                $('#firstName').removeAttr('readonly');
+                $('#lastName').removeAttr('readonly');
+                $('#middleName').removeAttr('readonly');              
+                $('#user_level').removeAttr('readonly');
+
+                $('#employeeNumber').val(data.empno);  
+                $('#firstName').val(data.firstname);
+                $('#lastName').val(data.lastname);
+                $('#middleName').val(data.middlename);                
+                $('#user_level').val(data.userlevel);
+                $('#ViewUserModal').modal('show');  
+            }  
+        })
     }
 </script>

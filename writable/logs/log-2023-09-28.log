@@ -535,3 +535,352 @@ in APPPATH\Views\allmodal\usermodal.php on line 83.
 11 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
 12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-28 12:36:01 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'case_study' in C:\xampp\htdocs\cs\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\cs\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'case_study', 3306, '', 0)
+#1 C:\xampp\htdocs\cs\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\cs\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\cs\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\cs\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\cs\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\cs\app\Controllers\User.php(15): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\cs\system\CodeIgniter.php(919): App\Controllers\User->index()
+#8 C:\xampp\htdocs\cs\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\cs\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\cs\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'case_study' in C:\xampp\htdocs\cs\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\cs\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\cs\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\cs\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\cs\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\cs\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\cs\app\Controllers\User.php(15): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\cs\system\CodeIgniter.php(919): App\Controllers\User->index()
+#7 C:\xampp\htdocs\cs\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\cs\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\cs\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-09-28 12:36:01 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'case_study'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbluser`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\User.php(15): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-28 12:36:40 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'case_study' in C:\xampp\htdocs\cs\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\cs\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'case_study', 3306, '', 0)
+#1 C:\xampp\htdocs\cs\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\cs\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\cs\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\cs\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\cs\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\cs\app\Controllers\User.php(15): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\cs\system\CodeIgniter.php(919): App\Controllers\User->index()
+#8 C:\xampp\htdocs\cs\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\cs\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\cs\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'case_study' in C:\xampp\htdocs\cs\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\cs\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\cs\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\cs\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\cs\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\cs\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\cs\app\Controllers\User.php(15): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\cs\system\CodeIgniter.php(919): App\Controllers\User->index()
+#7 C:\xampp\htdocs\cs\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\xampp\htdocs\cs\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\cs\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-09-28 12:36:40 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'case_study'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbluser`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\User.php(15): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 12:37:51 --> Attempt to read property "empno" on array
+in APPPATH\Views\allmodal\usermodal.php on line 83.
+ 1 APPPATH\Views\allmodal\usermodal.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "empno" on array', 'C:\\xampp\\htdocs\\cs\\app\\Views\\allmodal\\usermodal.php', 83)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\cs\\app\\Views\\allmodal\\usermodal.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('allmodal/usermodal', [], true)
+ 5 APPPATH\Views\user\index.php(111): view('allmodal/usermodal')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\cs\\app\\Views\\user\\index.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user/index', [], true)
+ 9 APPPATH\Controllers\User.php(16): view('user/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->index()
+11 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 12:39:29 --> Attempt to read property "empno" on array
+in APPPATH\Views\allmodal\usermodal.php on line 83.
+ 1 APPPATH\Views\allmodal\usermodal.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "empno" on array', 'C:\\xampp\\htdocs\\cs\\app\\Views\\allmodal\\usermodal.php', 83)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\cs\\app\\Views\\allmodal\\usermodal.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('allmodal/usermodal', [], true)
+ 5 APPPATH\Views\user\index.php(111): view('allmodal/usermodal')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\cs\\app\\Views\\user\\index.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user/index', [], true)
+ 9 APPPATH\Controllers\User.php(16): view('user/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->index()
+11 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 12:39:33 --> Attempt to read property "empno" on array
+in APPPATH\Views\allmodal\usermodal.php on line 83.
+ 1 APPPATH\Views\allmodal\usermodal.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "empno" on array', 'C:\\xampp\\htdocs\\cs\\app\\Views\\allmodal\\usermodal.php', 83)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\cs\\app\\Views\\allmodal\\usermodal.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('allmodal/usermodal', [], true)
+ 5 APPPATH\Views\user\index.php(111): view('allmodal/usermodal')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\cs\\app\\Views\\user\\index.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user/index', [], true)
+ 9 APPPATH\Controllers\User.php(16): view('user/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->index()
+11 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 12:49:34 --> Call to undefined function set_value()
+in APPPATH\Views\allmodal\usermodal.php on line 83.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('allmodal/usermodal', [], true)
+ 4 APPPATH\Views\user\index.php(111): view('allmodal/usermodal')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\cs\\app\\Views\\user\\index.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user/index', [], true)
+ 8 APPPATH\Controllers\User.php(16): view('user/index', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->index()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 12:52:23 --> Call to undefined function set_value()
+in APPPATH\Views\allmodal\usermodal.php on line 83.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('allmodal/usermodal', [], true)
+ 4 APPPATH\Views\user\index.php(111): view('allmodal/usermodal')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\cs\\app\\Views\\user\\index.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user/index', [], true)
+ 8 APPPATH\Controllers\User.php(16): view('user/index', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->index()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 12:53:33 --> Call to undefined function set_value()
+in APPPATH\Views\allmodal\usermodal.php on line 83.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('allmodal/usermodal', [], true)
+ 4 APPPATH\Views\user\index.php(111): view('allmodal/usermodal')
+ 5 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\cs\\app\\Views\\user\\index.php')
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user/index', [], true)
+ 8 APPPATH\Controllers\User.php(16): view('user/index', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->index()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 12:55:43 --> Attempt to read property "empno" on array
+in APPPATH\Views\allmodal\usermodal.php on line 83.
+ 1 APPPATH\Views\allmodal\usermodal.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "empno" on array', 'C:\\xampp\\htdocs\\cs\\app\\Views\\allmodal\\usermodal.php', 83)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\cs\\app\\Views\\allmodal\\usermodal.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('allmodal/usermodal', [], true)
+ 5 APPPATH\Views\user\index.php(111): view('allmodal/usermodal')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\cs\\app\\Views\\user\\index.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user/index', [], true)
+ 9 APPPATH\Controllers\User.php(16): view('user/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->index()
+11 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 13:31:27 --> Too few arguments to function App\Controllers\User::view(), 0 passed in C:\xampp\htdocs\cs\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\User.php on line 72.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->view()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 13:32:50 --> Too few arguments to function App\Controllers\User::view(), 0 passed in C:\xampp\htdocs\cs\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\User.php on line 72.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->view()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 13:33:04 --> Too few arguments to function App\Controllers\User::view(), 0 passed in C:\xampp\htdocs\cs\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\User.php on line 72.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->view()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 13:33:57 --> Undefined variable $users
+in APPPATH\Views\user\index.php on line 63.
+ 1 APPPATH\Views\user\index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', 'C:\\xampp\\htdocs\\cs\\app\\Views\\user\\index.php', 63)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\cs\\app\\Views\\user\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user/index', [], true)
+ 5 APPPATH\Controllers\User.php(81): view('user/index')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->view('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 13:34:25 --> Undefined variable $users
+in APPPATH\Views\user\index.php on line 63.
+ 1 APPPATH\Views\user\index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', 'C:\\xampp\\htdocs\\cs\\app\\Views\\user\\index.php', 63)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\cs\\app\\Views\\user\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user/index', [], true)
+ 5 APPPATH\Controllers\User.php(81): view('user/index')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->view('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 13:35:06 --> Attempt to read property "empno" on string
+in APPPATH\Views\user\index.php on line 65.
+ 1 APPPATH\Views\user\index.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "empno" on string', 'C:\\xampp\\htdocs\\cs\\app\\Views\\user\\index.php', 65)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\cs\\app\\Views\\user\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user/index', [], true)
+ 5 APPPATH\Controllers\User.php(81): view('user/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->view('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 13:37:29 --> Attempt to read property "empno" on array
+in APPPATH\Views\allmodal\usermodal.php on line 83.
+ 1 APPPATH\Views\allmodal\usermodal.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "empno" on array', 'C:\\xampp\\htdocs\\cs\\app\\Views\\allmodal\\usermodal.php', 83)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\cs\\app\\Views\\allmodal\\usermodal.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('allmodal/usermodal', [], true)
+ 5 APPPATH\Views\user\index.php(111): view('allmodal/usermodal')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\cs\\app\\Views\\user\\index.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user/index', [], true)
+ 9 APPPATH\Controllers\User.php(16): view('user/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->index()
+11 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-28 13:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-28 14:23:32 --> Undefined array key "id"
+in APPPATH\Controllers\User.php on line 86.
+ 1 APPPATH\Controllers\User.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\cs\\app\\Controllers\\User.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->getUserByID()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 14:23:51 --> Undefined array key "id"
+in APPPATH\Controllers\User.php on line 86.
+ 1 APPPATH\Controllers\User.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\cs\\app\\Controllers\\User.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->getUserByID()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 14:23:52 --> Undefined array key "id"
+in APPPATH\Controllers\User.php on line 86.
+ 1 APPPATH\Controllers\User.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\cs\\app\\Controllers\\User.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->getUserByID()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 14:23:53 --> Undefined array key "id"
+in APPPATH\Controllers\User.php on line 86.
+ 1 APPPATH\Controllers\User.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\cs\\app\\Controllers\\User.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->getUserByID()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 14:24:53 --> Undefined array key "id"
+in APPPATH\Controllers\User.php on line 86.
+ 1 APPPATH\Controllers\User.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\cs\\app\\Controllers\\User.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->getUserByID()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 14:27:00 --> Undefined array key "id"
+in APPPATH\Controllers\User.php on line 86.
+ 1 APPPATH\Controllers\User.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\cs\\app\\Controllers\\User.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->getUserByID()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 14:27:03 --> Undefined array key "id"
+in APPPATH\Controllers\User.php on line 86.
+ 1 APPPATH\Controllers\User.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\cs\\app\\Controllers\\User.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->getUserByID()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 14:27:07 --> Undefined array key "id"
+in APPPATH\Controllers\User.php on line 86.
+ 1 APPPATH\Controllers\User.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\cs\\app\\Controllers\\User.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->getUserByID()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 14:30:37 --> Undefined array key "id"
+in APPPATH\Controllers\User.php on line 86.
+ 1 APPPATH\Controllers\User.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\cs\\app\\Controllers\\User.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->getUserByID()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 14:31:06 --> Undefined array key "id"
+in APPPATH\Controllers\User.php on line 86.
+ 1 APPPATH\Controllers\User.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\cs\\app\\Controllers\\User.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->getUserByID()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 14:31:08 --> Undefined array key "id"
+in APPPATH\Controllers\User.php on line 86.
+ 1 APPPATH\Controllers\User.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\cs\\app\\Controllers\\User.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->getUserByID()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 14:31:09 --> Undefined array key "id"
+in APPPATH\Controllers\User.php on line 86.
+ 1 APPPATH\Controllers\User.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\cs\\app\\Controllers\\User.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->getUserByID()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 14:32:46 --> Undefined array key "id"
+in APPPATH\Controllers\User.php on line 86.
+ 1 APPPATH\Controllers\User.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\cs\\app\\Controllers\\User.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->getUserByID()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-28 14:32:47 --> Undefined array key "id"
+in APPPATH\Controllers\User.php on line 86.
+ 1 APPPATH\Controllers\User.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\cs\\app\\Controllers\\User.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\User->getUserByID()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

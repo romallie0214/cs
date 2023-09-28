@@ -60,7 +60,7 @@
                                     </tr>
                                 </thead>     
                                 <tbody>
-                                    <?php foreach ($user as $user):?> 
+                                    <?php foreach ($users as $user):?> 
                                     <tr>
                                         <td><?=$user->empno?></td>
                                         <td><?=$user->lastname?></td>
@@ -71,12 +71,9 @@
       
                               
                                         <button class="btn btn-primary" onclick="ViewUserModal(<?= $user->id; ?>)">View</button>
-
-
-
-
+                                        <button class="btn btn-warning" onclick="openEditItemModal(<?= $user->id; ?>)"><i class="fa fa-id-card"></i></button>
                                            
-                                            <a class="btn btn-warning" href="<?=base_url()?>user/edit" role="button" title="Edit">  <i class="fa fa-id-card"></i></a>
+                                            <!-- <a class="btn btn-warning" href="<?=base_url()?>user/edit" role="button" title="Edit">  <i class="fa fa-id-card"></i></a> -->
                                             <a class="btn btn-danger" href="<?=base_url()?>user/delete" role="button" title="Delete">  <i class="fa fa-minus-square"></i></a>
                                         </td>
                                     </tr>
