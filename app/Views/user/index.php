@@ -41,12 +41,15 @@
 
                             
                             <table id="example1" class="table table-bordered table-striped">
+                            <?php if(session()->getFlashdata('msg') != ''): ?>
+                                <div class="alert alert-<?=session()->getFlashdata('alert')?>">
+                                    <strong><?=session()->getFlashdata('msg')?></strong>
+                                </div>
+                            <?php  endif; ?>
                                 <div class="row mb-2">
-                                                                 
                                     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#AddUserModal">
                                         Add User
                                     </button>
-
                                 </div>
                                 <thead>
                                 
@@ -71,10 +74,8 @@
       
                               
                                         <button class="btn btn-primary" onclick="ViewUserModal(<?= $user->id; ?>)">View</button>
-                                        <button class="btn btn-warning" onclick="openEditItemModal(<?= $user->id; ?>)"><i class="fa fa-id-card"></i></button>
-                                           
-                                            <!-- <a class="btn btn-warning" href="<?=base_url()?>user/edit" role="button" title="Edit">  <i class="fa fa-id-card"></i></a> -->
-                                            <a class="btn btn-danger" href="<?=base_url()?>user/delete" role="button" title="Delete">  <i class="fa fa-minus-square"></i></a>
+                                        <button class="btn btn-warning" onclick="openEditItemModal(<?= $user->id; ?>)"><i class="fa fa-id-card"></i></button>                                        
+                                        <button class="btn btn-danger" onclick="openDeleteConfirmModal(<?= $user->id; ?>)"><i class="fa fa-minus-square"></i></button>
                                         </td>
                                     </tr>
                                     <?php endforeach ?>  

@@ -10,12 +10,11 @@ class User extends BaseController
     {
         $user_model = new \App\Models\UserModel();
         //dd($user_model -> findAll());
-        $data['users'] =$user_model -> findAll();
+        $data['users'] =$user_model->where('is_deleted',0)->findAll();
         return view('user/index', $data);
     }
 
-    public function add()
-    {
+    public function add(){
         // Handle form submission to add an employee
         // Add validation rules here (e.g., for employee number, first name, last name, etc.)
         helper(['form']);
@@ -54,24 +53,54 @@ class User extends BaseController
         }
     }
 
+    public function updateUser(){
+        helper(['form']);
+        $session = session();
 
-    public function view($id)
-    {
-            // Load the model
+        $validate = $this->validate([
+            'employeeNumber' => 'required',
+            'firstName' => 'required',
+            'lastName' => 'required',
+            'middleName' => 'required',
+            'userLevel' => 'required',
+        ]);
+        
+        if ($this->request->getMethod() === 'post' && $validate){
+            $id = $this->request->getPost('id');
+            $data = [
+                'empno' => $this->request->getPost('employeeNumber'),
+                'firstname' => $this->request->getPost('firstName'),
+                'lastname' => $this->request->getPost('lastName'),
+                'middlename' => $this->request->getPost('middleName'),
+                'userlevel' => $this->request->getPost('userLevel')
+            ];
+    
             $user_model = new \App\Models\UserModel();
-
-            // Fetch user data based on the provided $id
-            $user = $user_model->find($id);
-            return $user;
-
-            //return view('user/index');
+            $user_model->update($id,$data);
+            
+            $session->setFlashdata('alert','success');
+            return redirect()->to('user/index')->with('msg', 'Employee record updated successfully.');
+        }else{
+            $session->setFlashdata('alert','danger');
+            return redirect()->to('user/index')->with('msg', 'An error was encounter while trying to update user data.');
+        }
     }
 
 
-    public function delete()
-    {
-
-        return('delete');
+    public function deleteUser(){        
+        $session = session();
+        if ($this->request->getMethod() === 'post'){
+            $user_model = new \App\Models\UserModel();
+            $id = $this->request->getPost('user_id');
+            $user_model->update($id,['is_deleted'=>1]);
+            $session->setFlashdata('alert','success');
+            $session->setFlashdata('msg','User deleted successfully.');
+            echo json_encode(true);  
+        }else{
+            $session->setFlashdata('alert','danger');
+            $session->setFlashdata('msg','An error was encountered while trying to delete user.');
+            echo json_encode(false); 
+        }      
     }
 
 

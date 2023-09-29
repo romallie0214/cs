@@ -78,32 +78,58 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <label for="employeeNumber">Employee Number:</label>
-                <input type="text" id="employeeNumber" class="form-control" value="" readonly>
+
+            <div class="modal-body">    
+                <form action="<?= base_url('user/updateUser') ?>" method="post">       
+                    <input type="hidden" id="id" name="id" class="form-control" value="" readonly>     
+                    <label for="employeeNumber">Employee Number:</label>
+                    <input type="text" id="employeeNumber" name="employeeNumber" class="form-control" value="" readonly>
 
 
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" class="form-control"  readonly>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" class="form-control"  readonly>
 
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" class="form-control" readonly>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" class="form-control" readonly>
 
-                <label for="middleName">Middle Name:</label>
-                <input type="text" id="middleName" class="form-control" readonly>
+                    <label for="middleName">Middle Name:</label>
+                    <input type="text" id="middleName" name="middleName" class="form-control" readonly>
 
-                <label for="userLevel">User Level:</label>
-                <select class="form-control" id="user_level" name="user_level" readonly>
-                    <option value="1">Admin</option>
-                    <option value="2">Encoder</option>
-                    <option value="3">Another Role</option>
-                </select>
+                    <label for="userLevel">User Level:</label>
+                    <select class="form-control" id="userLevel" name="userLevel" disabled>
+                        <option value="1">Admin</option>
+                        <option value="2">Encoder</option>
+                        <option value="3">Another Role</option>
+                    </select>
+                    
             </div>
             <div class="modal-footer">
+                <button type="submit" id="btn_update" class="btn btn-primary">Update</button>
+                </form>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
+</div>
+
+<div class="modal fade" id="deleteModal">
+ <div class="modal-dialog">
+  <div class="modal-content">
+   <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+   </div>
+   <div class="modal-body">
+    <p>Are you sure you want to delete?</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+    <button type="button" id="conBtn" onclick="deleteUser();" class="btn btn-danger">Yes</button>
+   </div>
+  </div>
+ </div>
 </div>
 
 <script>
@@ -112,12 +138,19 @@
 
     function ViewUserModal(user_id) {
         $.ajax({  
-            url:"<?php echo base_url(); ?>user/getUserByID",  
+            url:"<?=base_url(); ?>user/getUserByID",  
             method:"POST",  
             data:{user_id:user_id},  
             dataType:"json",  
             success:function(data)  
-            {                
+            {
+                $('#employeeNumber').attr('readonly', true);
+                $('#firstName').attr('readonly', true);
+                $('#lastName').attr('readonly', true);
+                $('#middleName').attr('readonly', true);         
+                $('#userLevel').attr('disabled', true);
+
+                $('#btn_update').hide();
                 $('#employeeNumber').val(data.empno);  
                 $('#firstName').val(data.firstname);
                 $('#lastName').val(data.lastname);
@@ -126,34 +159,57 @@
                 $('#ViewUserModal').modal('show');  
             }  
         })
-        
-        //$('#ViewUserModal').modal('show');
-
-
-        // Include your logic to populate the "View Item" modal content here
     }
 
     function openEditItemModal(user_id) {
         $.ajax({  
-            url:"<?php echo base_url(); ?>user/getUserByID",  
+            url:"<?=base_url(); ?>user/getUserByID",  
             method:"POST",  
             data:{user_id:user_id},  
             dataType:"json",  
             success:function(data)  
             {                
+                $('#btn_update').show();
                 $('#employeeNumber').removeAttr('readonly');
                 $('#firstName').removeAttr('readonly');
                 $('#lastName').removeAttr('readonly');
                 $('#middleName').removeAttr('readonly');              
-                $('#user_level').removeAttr('readonly');
+                $('#userLevel').removeAttr('disabled');
 
+                $('#id').val(data.id);  
                 $('#employeeNumber').val(data.empno);  
                 $('#firstName').val(data.firstname);
                 $('#lastName').val(data.lastname);
                 $('#middleName').val(data.middlename);                
-                $('#user_level').val(data.userlevel);
-                $('#ViewUserModal').modal('show');  
+                $('#userLevel').val(data.userlevel);
+                $('#ViewUserModal').modal('show');
             }  
         })
     }
+
+
+    function openDeleteConfirmModal(user_id){
+        $('#conBtn').data('id',user_id);
+        $('#deleteModal').modal('show');
+    }
+
+    function deleteUser() {
+        const user_id = $('#conBtn').data('id');
+        $.ajax({  
+            url:"<?=base_url(); ?>user/deleteUser",  
+            method:"POST",  
+            data:{user_id:user_id},  
+            // dataType:"json",  
+            success:function(data)  
+            {                
+                // if(data){
+                //     alert("User deleted successfully");
+                // }else{
+                //     alert("An error was encountered while trying to delete user.");
+                // }
+                window.location.href = "<?=base_url()?>/user/index"; 
+            }  
+        })
+    }
+
 </script>
